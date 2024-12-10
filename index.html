@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gram</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="container flex">
+        <div class="logo">The Gram</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="profile.html">Profile</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+        </nav>
+    </div>
+</header>
+ <!-- Profile Page -->
+ <section class="profile">
+    <div class="profile-info">
+        <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-img">
+        <h2 id="user-name">John Doe</h2>
+        <p id="bio">Photographer | Nature Lover</p>
+        <div class="stats">
+            <div><span id="posts-count">100</span> Posts</div>
+            <div><span id="followers-count">1000</span> Followers</div>
+            <div><span id="following-count">300</span> Following</div>
+        </div>
+        <button class="btn" onclick="window.location.href='change-profile.html'">Edit Profile</button>
+    </div>
+
+   
+</section>
+</main>
+
+
+<!-- Main Content -->
+<main>
+    <!-- Create Post -->
+    <section class="create-post">
+        <h2>Create a Post</h2>
+        <form id="createPostForm" enctype="multipart/form-data">
+            <input type="file" id="postImage" required>
+            <textarea id="caption" placeholder="Write a caption..." required></textarea>
+            <input type="text" id="location" placeholder="Location (optional)">
+            <input type="text" id="tags" placeholder="Add tags (optional)">
+            <button type="submit">Post</button>
+        </form>
+    </section>
+
+    <!-- Search and Follow -->
+    <section class="search-follow">
+        <h3>Search Users</h3>
+        <input type="text" id="searchUser" placeholder="Search by username">
+        <button onclick="searchUser()">Search</button>
+
+        <div id="searchResults"></div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 The Gram</p>
+</footer>
+
+    <!-- User Feed -->
+    <section class="feed">
+        <h3>Recent Posts</h3>
+        <div class="post">
+            <img src="https://via.placeholder.com/500x300" alt="Post Image">
+            <div class="post-info">
+                <p>Amazing sunset view! #sunset #nature</p>
+                <div class="actions">
+                    <button onclick="likePost()">Like</button>
+                    <button onclick="commentPost()">Comment</button>
+                </div>
+            </div>
+        </div>
+        <!-- Add more posts dynamically here -->
+   <!-- Private Messaging -->
+   <div class="message">
+    <h3>Send Private Message</h3>
+    <textarea id="messageContent" placeholder="Write a message"></textarea>
+    <button onclick="sendPrivateMessage()">Send Message</button>
+</div>  </section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 The Gram</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

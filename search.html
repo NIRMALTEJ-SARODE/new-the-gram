@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Users</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container flex">
+            <div class="logo">The Gram</div>
+            <nav>
+                <a href="profile.html">Profile</a>
+                <a href="feed.html">Feed</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="search">
+        <input type="text" id="search-bar" placeholder="Search for users..." oninput="searchUsers()">
+        <div id="user-list">
+            <!-- Search results will appear here -->
+        </div>
+    </section>
+
+    <script src="search.js"></script>
+</body>
+</html>
